@@ -1,0 +1,19 @@
+@import '_vars';
+body{
+    background-color: $body-color;
+}
+section{
+    background-color: $section-color;
+}
+#heading{
+    color: $heading-color;
+}
+#text{
+    color: $text-color;
+}
+#promoText{
+    color: $heading-color;
+}
+footer{
+    color: $footer-color;
+}
