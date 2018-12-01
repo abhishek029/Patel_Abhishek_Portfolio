@@ -1,5 +1,7 @@
 /* style for lightbox */
-
+.hidden{
+    display: none;
+}
 .lightbox {
 	display: none;
 	position: absolute;
@@ -30,14 +32,15 @@
     margin-top: 10%;
 }
 #workInfo{
-    margin-top: 175px; 
+    margin-top: 150px; 
 }
 
 body{
     background-color: #b4b3b7;
+    color: white;
 }
 
-#workHeading{
+#workHeading,h2{
     color: #3097cf;
 }
 #workDesc{
