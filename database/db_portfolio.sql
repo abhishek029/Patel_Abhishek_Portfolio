@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Nov 30, 2018 at 06:48 PM
+-- Generation Time: Dec 01, 2018 at 03:57 PM
 -- Server version: 5.7.21
 -- PHP Version: 5.6.35
 
@@ -85,7 +85,7 @@ INSERT INTO `tbl_work` (`work_id`, `work_title`, `work_description`, `work_thumb
 (3, 'Pure volume', 'This was our first team project. I was developer in this and I have used foundation in this page and created our advertisement and a commercial video for them.', 'purevolume_thumb.jpg', 'https://github.com/destanol/bootcamp.git'),
 (4, 'Infuser Bottle', 'This project was on Infuser Bottle brand. We were supposed to create all brand documents. We came up with this product after doing color study and other basic requirements of product. We focused a lot on typography and selected that font. We added rubber cover too for extra protection and adding grip to hands.', 'infuserbottle_thumbs', 'Not Available'),
 (5, 'Soccer Video', 'In this project we created a sports environment where big banners were shown and giant screens was divided in parts and playing a video on it.', 'soccer_thumb.jpg', 'Not Available'),
-(6, 'Car Build', 'We have selected the car and done its cinema 4D work till now. We are supposed to build a interactive app which shows all the parts of car when user hover over to some part.', 'car_thumbs.jpg', 'https://github.com/abhishek029/Patel_Abhishek_Han_Ly_AutoApp.git');
+(6, 'Car Build', 'We have selected the car and done its cinema 4D work till now. We are supposed to build a interactive app which shows all the parts of car when user hover over to some part.', 'car_thumb.jpg', 'https://github.com/abhishek029/Patel_Abhishek_Han_Ly_AutoApp.git');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
