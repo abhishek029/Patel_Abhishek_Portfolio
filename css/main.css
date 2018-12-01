@@ -1,2 +1,49 @@
-body{color: #b4b3b7;}
-/*# sourceMappingURL=main.css.map */
+/* style for lightbox */
+
+.lightbox {
+	display: none;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	background-color: rgba(0,0,0,0.95);
+}
+
+/* css for close button of the lightbox */
+.close-lightbox {
+	position: absolute;
+	right: 12px;
+	top: 12px;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 2em;
+	font-weight: bold;
+	color: white;
+	cursor: pointer;
+}
+
+/* style to show the lightboc on click */
+.show-lightbox { display: block; }
+
+/* style for actual content of lightbox */
+#lightbox-image{
+    margin-top: 10%;
+}
+#workInfo{
+    margin-top: 175px; 
+}
+
+body{
+    background-color: #b4b3b7;
+}
+
+#workHeading{
+    color: #3097cf;
+}
+#workDesc{
+    color: white;
+}
+section{
+    background-color: #211e26;
+    margin: 20px 0px 20px 0px;
+}

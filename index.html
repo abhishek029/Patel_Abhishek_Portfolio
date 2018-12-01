@@ -22,29 +22,45 @@
 
 
      <section class="row">
-        <h2 class="columns small-12 text-center heading"> {{ aboutTitle }}</h2>
-        
-        
-            <div class="columns small-12" v-for="about in aboutdata">
-                
+        <h2 class="columns small-12 text-center heading"> {{ aboutTitle }}</h2>           
+            <div class="columns small-12" v-for="about in aboutdata">                
                 <div class="columns small-4">
                     <img class="columns small-12" :src="'images/'+about.image" alt="profileimage">
                 </div>
                 <div class="columns small-8">
                     <p class="columns small-12">{{ about.description }}</p>
                 </div>
-            </div>
-        
+            </div>        
     </section>
 
     <section class="row">
         <h2 class="columns small-12 text-center"> {{ workTitle }}</h2>
         <p class="columns small-12 text-center">Check out some of my work which I did recently</p>
-                <div class="columns small-12 medium-6" v-for="work in workdata">
-                    <img class="columns small-12" :src="'images/'+work.work_thumbnail" alt="workimage">
-                </div>
+
+            <div id="houseImages" class="columns small-12 medium-6"  v-for="work in workdata">
+                <img class="showLightbox" v-on:click="showLightBox(work)" :data-offset="work.work_id" :src="'images/'+work.work_thumbnail" alt="workimage">
+            </div>
     </section>  
-   
+
+
+    <section class="lightbox">
+            <span class="close-lightbox" v-on:click="closeLightBox">X</span>
+            <div class="columns small-4 small-offset-2">
+                <img src="" id="lightbox-image">
+            </div>
+            <div id="workInfo" class="columns small-6">
+                <h3 id="workHeading">{{workhead}}</h3>
+                <p id="workDesc">{{workdesc}}</p>
+                <a class="columns small-8" :href="worklink" target="_blank"><img class="columns small-1" src="images/repo.svg">View Code</a>        
+            </div>
+    </section>
+
+
+    <!-- <img src="" id="lightbox-image">
+    <h3 id="workHeading">{{workhead}}</h3>
+    <p id="workDesc">{{workdesc}}</p>
+    <a class="columns small-8" :href="worklink" target="_blank"><img class="columns small-1" src="images/repo.svg">View Code</a>
+     -->
     </main>
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>

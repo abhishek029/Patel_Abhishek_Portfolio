@@ -24,4 +24,5 @@ function get_about_data($pdo) {
     }
     return $results;
 }
+
 ?>

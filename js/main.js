@@ -1,4 +1,7 @@
 (()=> {
+
+
+    
     const vm = new Vue({
         el: '#app',
 
@@ -7,20 +10,20 @@
             aboutTitle : "ABOUT ME",
             workTitle : "PORTFOLIO",
             aboutdata : [],
-            workdata : []
+            workdata : [],
+            workhead: "",
+            workdesc: "",
+            worklink: ""
         },
 
         created : function() {
-            console.log("fetch all data from database");
             this.fetchAllData();
         },
 
         methods : {
 
         // function for grabbing all data from database
-            fetchAllData() {         
-                console.log("fetchAllData function called");
-                
+            fetchAllData() {                         
                 fetch(`./includes/index.php`) // pass in the one or many query
                 .then(res => res.json())
                 .then(data => {                       
@@ -32,6 +35,21 @@
                 .catch(function(error) {
                     console.log(error);
                 });
+            },
+
+            showLightBox(e){
+                document.querySelector(".lightbox").classList.add('show-lightbox');
+                console.log('image src will be : images/work'+ (e.work_id) +'.jpg');
+                
+                document.querySelector("#lightbox-image").src = 'images/work'+ (e.work_id) +'.jpg';
+                this.workhead = e.work_title;
+                this.workdesc = e.work_description;
+                this.worklink = e.work_repolink;
+            },
+
+            closeLightBox(){
+                console.log("closeLightBox");
+                document.querySelector(".lightbox").classList.remove('show-lightbox');
             }
         }
     });

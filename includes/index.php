@@ -5,7 +5,4 @@ include 'functions.php';
     $about = get_about_data($conn);
     $work = get_all_work($conn);
     echo json_encode(array($about,$work));
-  
- 
-
 ?>
