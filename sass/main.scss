@@ -43,7 +43,9 @@
 // style to show body background color and text color of body
 body{
     background-color: $body-color;
-    color: $body-text-color;
+	color: $body-text-color;
+	font-size: 20px;
+	font-family: 'Fjalla One', sans-serif;
 }
 
 /* ==============HOME CSS============== */
@@ -58,24 +60,22 @@ body{
 	font-weight: bold;
 	border: 3px solid black;
 	border-radius: 15px;
-	margin-top: 5%;
-	margin-left: 35%;
+	margin: 5% 0 0 35%;		/*top-right-bottom-left*/
 }
 
 // style of span tag to look different 
-#home p{
-	font-size: 50px;
-}
 .promoText{
 	font-weight: bold;
 	color: $heading-color;
 	font-family: 'Patrick Hand', cursive;
 }
 
+/* ==============PORTFFOLIO CSS============ */ 
 
 // style to show headings of website
 #workHeading,h2{
 	font-weight: bold;
+	font-size: 25px;
 	color: $heading-color;
 	font-family: 'Fjalla One', sans-serif;
 }
@@ -83,12 +83,41 @@ body{
 // style to add a thick line betweeen work heading and actual work
 #workText{
 	border-bottom: 5px solid $heading-color;
-	margin-right: 15%;
-	margin-left: 15%;
+	margin: 0 15% 0 15%;			/*top-right-bottom-left*/
+	padding: 50px 0px 50px 0px;		/*top-right-bottom-left*/
+
 }
 
 // style to add section background
 section{
     background-color: $section-color;
-    margin: 20px 0px 20px 0px;
+	margin: 30px 0px 30px 0px;		/*top-right-bottom-left*/
+	padding: 30px 0px 30px 0px;		/*top-right-bottom-left*/
 }
+
+
+
+
+@media screen and (min-width: 600px) {
+	body{
+		font-size: 25px;
+	}
+	#home p {
+	  font-size: 30px;
+	}
+	h2,#workHeading{
+		font-size: 30px;
+	}
+  }
+
+@media screen and (min-width: 1000px) {
+	body{
+		font-size: 35px;
+	}
+	#home p  {
+	  font-size: 40px;
+	}
+	h2,#workHeading{
+		font-size: 40px;
+	}
+  }
