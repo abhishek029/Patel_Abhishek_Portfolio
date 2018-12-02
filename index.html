@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/foundation.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Patrick+Hand" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
     <title>PATEL ABHI</title>
 </head>
@@ -34,10 +35,11 @@
 
 
     <main id="app">
-        <section class="row">
+        <!-- Home/Promo page -->
+        <section id="home" class="row">
             <h2 class="hidden">Promo Section</h2>
             <p class="columns small-12 text-center">My inspiration " <span class="promoText"> {{ promoText }} </span>"</p>
-            <input type="text" class="columns small-3 button" placeholder="WATCH REEL">
+            <input type="button" class="columns small-4 button myButton small-centered" value="WATCH REEL">
         </section>  
 
 <!-- About page -->
@@ -60,7 +62,7 @@
 <!-- Portfolio section of my work -->
     <section id="portfolio" class="row">
         <h2 class="columns small-12 text-center"> {{ workTitle }}</h2>
-        <p class="columns small-12 text-center">Check out some of my work which I did recently</p>
+        <p id="workText" class="columns small-8 text-center">Check out some of my work which I did recently</p>
 
             <div id="houseImages" class="columns small-12 medium-6"  v-for="work in workdata">
                 <img class="showLightbox" v-on:click="showLightBox(work)" :data-offset="work.work_id" :src="'images/'+work.work_thumbnail" alt="workimage">
@@ -87,7 +89,7 @@
     <!-- Contact page link -->
     <section id="contact" class="row">
         <h2 class="columns small-12 text-center">CONTACT</h2>
-        <a href="contact.php"><input class="columns small-4 small-offset-4 button" type="button"></a>
+        <a href="contact.php"><input class="columns small-4 small-offset-4 button myButton" type="button" value="CONTACT ME"></a>
     </section>
 
     <footer>

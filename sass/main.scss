@@ -1,9 +1,10 @@
 @import '_vars.scss';
-
-/* style for lightbox */
 .hidden{
     display: none;
 }
+
+
+/* style for lightbox */
 .lightbox {
 	display: none;
 	position: absolute;
@@ -33,21 +34,60 @@
 #lightbox-image{
     margin-top: 10%;
 }
+
+// style for placing light box data down
 #workInfo{
     margin-top: 150px; 
 }
 
+// style to show body background color and text color of body
 body{
     background-color: $body-color;
-    color: white;
+    color: $body-text-color;
 }
 
+/* ==============HOME CSS============== */
+#home{
+	padding-top: 15%;
+	padding-bottom: 15%;
+}
+// style for watch reel button
+.myButton{
+	background-color: white;
+	color: black;
+	font-weight: bold;
+	border: 3px solid black;
+	border-radius: 15px;
+	margin-top: 5%;
+	margin-left: 35%;
+}
+
+// style of span tag to look different 
+#home p{
+	font-size: 50px;
+}
+.promoText{
+	font-weight: bold;
+	color: $heading-color;
+	font-family: 'Patrick Hand', cursive;
+}
+
+
+// style to show headings of website
 #workHeading,h2{
-    color: $heading-color;
+	font-weight: bold;
+	color: $heading-color;
+	font-family: 'Fjalla One', sans-serif;
 }
-#workDesc{
-    color: white;
+
+// style to add a thick line betweeen work heading and actual work
+#workText{
+	border-bottom: 5px solid $heading-color;
+	margin-right: 15%;
+	margin-left: 15%;
 }
+
+// style to add section background
 section{
     background-color: $section-color;
     margin: 20px 0px 20px 0px;
