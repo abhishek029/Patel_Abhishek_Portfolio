@@ -33,14 +33,14 @@
     <main id="app">
         
         <!-- Home/Promo page -->
-        <section id="home" class="row">
+        <section id="home" class="row sectionContainer">
             <h2 class="hidden">Promo Section</h2>
             <p class="columns small-12 text-center">My inspiration " <span class="promoText"> {{ promoText }} </span>"</p>
             <input type="button" class="columns small-4 button myButton small-centered" value="WATCH REEL">
         </section>  
 
         <!-- About page -->
-        <section id="about" class="row">
+        <section id="about" class="row sectionContainer">
             <h2 class="columns small-12 text-center heading"> {{ aboutTitle }}</h2>           
                 <div class="columns small-12" v-for="about in aboutdata">  
 
@@ -69,7 +69,7 @@
 
 
         <!-- Portfolio section of my work -->
-        <section id="portfolio" class="row">
+        <section id="portfolio" class="row sectionContainer">
             <h2 class="columns small-12 text-center"> {{ workTitle }}</h2>
             <p id="workText" class="columns small-8 text-center">Check out some of my work which I did recently</p>
 
@@ -97,7 +97,7 @@
         </section>
 
         <!-- Contact page link -->
-        <section id="contact" class="row">
+        <section id="contact" class="row sectionContainer">
             <h2 class="columns small-12 text-center">CONTACT</h2>
             <p class="columns small-12 text-center">Send your ideas or suggessitions here!</p>
             <a href="contact.php"><input class="columns small-4 small-offset-4 button myButton" type="button" value="REACH ME"></a>

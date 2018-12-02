@@ -80,6 +80,10 @@ body{
 	font-family: 'Fjalla One', sans-serif;
 }
 
+#houseImages{
+	margin: 30px;
+}
+
 // style to add a thick line betweeen work heading and actual work
 #workText{
 	border-bottom: 5px solid $heading-color;
@@ -89,10 +93,12 @@ body{
 }
 
 // style to add section background
-section{
-    background-color: $section-color;
-	margin: 30px 0px 30px 0px;		/*top-right-bottom-left*/
-	padding: 30px 0px 30px 0px;		/*top-right-bottom-left*/
+.sectionContainer{
+	background-color: $section-color;
+	margin-bottom: 30px;
+	margin-top: 30px;
+	padding-bottom: 30px;
+	padding-top: 30px;
 }
 
 
