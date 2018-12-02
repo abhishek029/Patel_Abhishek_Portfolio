@@ -15,6 +15,9 @@
 	background-color: rgba(0,0,0,0.95);
 }
 
+.lightbox div{
+	margin-top: 10%
+}
 /* css for close button of the lightbox */
 .close-lightbox {
 	position: absolute;
@@ -32,14 +35,23 @@
 
 /* style for actual content of lightbox */
 #lightbox-image{
-    margin-top: 10%;
+	border: 5px solid white;
 }
 
 // style for placing light box data down
 #workInfo{
     margin-top: 150px; 
 }
+#workInfo a{
+		margin-top: 10%;
+}
+.worklink{
+	margin-left: 20%;
 
+}
+#workDesc{
+	margin-top:30px;
+}
 // style to show body background color and text color of body
 body{
     background-color: $body-color;
@@ -48,6 +60,24 @@ body{
 	font-family: 'Fjalla One', sans-serif;
 }
 
+footer{
+	padding-top: 30px;
+	padding-bottom: 30px;
+	background-color: $footer-color;
+}
+footer h3,h4{
+	color: $heading-color;
+}
+footer p{
+	color: black;
+}
+footer div label{
+	font-weight: bold;
+	text-align: center;
+}
+footer div img{
+	margin-top: 20px;
+}
 /* ==============HOME CSS============== */
 #home{
 	padding-top: 15%;
@@ -63,11 +93,32 @@ body{
 	margin: 5% 0 0 35%;		/*top-right-bottom-left*/
 }
 
+#home p{
+	margin-left: 20%;
+}
 // style of span tag to look different 
 .promoText{
 	font-weight: bold;
 	color: $heading-color;
 	font-family: 'Patrick Hand', cursive;
+}
+
+/* ==============ABOUT CSS============ */ 
+
+#about h2{
+	margin-bottom: 40px;
+}
+
+#about h3{
+	font-size: 40px;
+	margin: 0 25% 0 25%;			/*top-right-bottom-left*/
+	padding: 50px 0px 10px 0px;		/*top-right-bottom-left*/
+	border-bottom: 5px solid $heading-color;	
+}
+
+#about object{
+	margin-bottom: 50px;
+	margin-top: 50px;
 }
 
 /* ==============PORTFFOLIO CSS============ */ 
@@ -80,9 +131,20 @@ body{
 	font-family: 'Fjalla One', sans-serif;
 }
 
-#houseImages{
-	margin: 30px;
+.box img{
+	margin-top: 40px;
+	opacity: 1;
+	transition: .2s ease-in-out;
+	border: 5px solid #fff;
 }
+
+.showLightbox:hover{
+	transition: .2s ease-in-out;
+	transform: scale(.9); 
+	-webkit-filter: grayscale(80%);
+	filter: grayscale(80%);
+}
+
 
 // style to add a thick line betweeen work heading and actual work
 #workText{

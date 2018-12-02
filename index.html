@@ -35,7 +35,7 @@
         <!-- Home/Promo page -->
         <section id="home" class="row sectionContainer">
             <h2 class="hidden">Promo Section</h2>
-            <p class="columns small-12 text-center">My inspiration " <span class="promoText"> {{ promoText }} </span>"</p>
+            <p class="columns small-8 text-center">My inspiration " <span class="promoText"> {{ promoText }} </span>"</p>
             <input type="button" class="columns small-4 button myButton small-centered" value="WATCH REEL">
         </section>  
 
@@ -44,22 +44,22 @@
             <h2 class="columns small-12 text-center heading"> {{ aboutTitle }}</h2>           
                 <div class="columns small-12" v-for="about in aboutdata">  
 
-                    <div class="columns small-12 large-4">
+                    <div class="columns small-12 medium-4">
                         <img class="columns small-12" :src="'images/'+about.image" alt="profileimage">
                     </div>
 
-                    <div class="columns small-12 text-center large-8">
+                    <div class="columns small-12 text-center medium-8">
                         <p class="columns small-12">{{ about.description }}</p>
                     </div>
                    
-                    <h2 class="solumns small-12 text-center heading">What Can I Do.</h2>
+                    <h3 class="columns small-6 text-center">What Can I Do.</h2>
 
-                    <div class="columns small-12 large-6">
+                    <div class="columns small-12 medium-6">
                         <object class="columns small-6 small-offset-3" data="images/design.svg" type="image/svg+xml"></object>
                         <p class="columns text-center">{{designSkills}}</p>
                     </div>
                         
-                    <div class="columns small-12 large-6">
+                    <div class="columns small-12 medium-6">
                         <object class="columns small-6 small-offset-3" data="images/developer.svg" type="image/svg+xml"></object>
                         <p class="columns text-center">{{developerSkills}}</p>
                     </div>
@@ -72,17 +72,19 @@
         <section id="portfolio" class="row sectionContainer">
             <h2 class="columns small-12 text-center"> {{ workTitle }}</h2>
             <p id="workText" class="columns small-8 text-center">Check out some of my work which I did recently</p>
-
-                <div id="houseImages" class="columns small-12 medium-6"  v-for="work in workdata">
-                    <img class="showLightbox" v-on:click="showLightBox(work)" :data-offset="work.work_id" :src="'images/'+work.work_thumbnail" alt="workimage">
+                
+            <div id="houseImages">
+                    <div class="columns small-12 medium-6 box"  v-for="work in workdata">
+                        <!-- <h3 class="workImageHeading text-center">{{work.work_title}}</h3>                             -->
+                        <img class="showLightbox" v-on:click="showLightBox(work)" :data-offset="work.work_id" :src="'images/'+work.work_thumbnail" alt="workimage">                        
+                    </div>
                 </div>
         </section>  
 
 
         <!-- LightBox stuff which is hidden by default -->
         <section class="lightbox">
-                <span class="close-lightbox" v-on:click="closeLightBox">X</span>
-                
+                <span class="close-lightbox" v-on:click="closeLightBox">X</span>                
 
                 <div class="columns small-12 large-4 large-offset-1">
                     <img src="" id="lightbox-image">
@@ -91,7 +93,8 @@
                 <div id="workInfo" class="columns small-12 large-7">   
                     <h2 class="columns small-12" id="workHeading">{{workhead}}</h2>             
                     <p class="columns small-12" id="workDesc">{{workdesc}}</p>
-                    <a class="columns small-12" :href="worklink" target="_blank"><img class="columns small-1" src="images/repo.svg">View Code</a>        
+                    <a class="columns small-3 worklink" :href="worklink" target="_blank"><img class="columns small-8" src="images/repo.svg"></a>   
+                    <a class="columns small-6 text-left" href="" target="_blank">View Product</a>     
                 </div>
 
         </section>
@@ -104,7 +107,23 @@
         </section>
 
         <footer class="row">
-            <label class="columns text-center">2018 DESIGNED AND DEVELOPED BY ABHI PATEL</label>
+
+            <div class="columns small-4 text-left">
+                <h3>PATEL ABHISHEK</h3>
+                <h3>Study: </h3>
+                <p>INTERACTIVE MEDIA DESIGN</p>
+                <p>BECHELOR IN COMPUTER APPLICATIONS</p>
+                <p>Interest: FRONT-BACK END DEVELOPING</p>
+            </div>
+            <div class="columns small-4">
+                    <a href="https://github.com/abhishek029" target="_blank"><img class="small-2 small-offset-4" src="images/repo.svg"></a>
+                </div>
+            <div class="columns small-4">
+                <h3>Education</h3>
+                <p>FANSHAWE COLLEGE</p>
+                <p>DOWNTOWN CAMPUS</p>
+                <p>137 DUNDAS STREET</p>
+            </div>
         </footer>
 
     </main>
