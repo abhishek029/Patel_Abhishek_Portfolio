@@ -8,6 +8,8 @@
         data: {
             promoText : "EVEN A SINGLE DOT CAN BE CODED IN MULTIPLE WAYS",
             aboutTitle : "ABOUT ME",
+            designSkills: "Photoshop, Ilustrator, Indesign, Cinema 4D, After Effects",
+            developerSkills: "HTML5, CSS3, SASS, JavaScript, Git,PHP, Java, C, C++, Python,  SQL Database",
             workTitle : "PORTFOLIO",
             aboutdata : [],
             workdata : [],
