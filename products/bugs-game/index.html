@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>GAME</title>
+<link rel="stylesheet" href="css/game.css">
+<link rel="stylesheet" href="css/foundation.css">
+</head>
+
+
+
+<body>
+	<div id="gameArea" class="row">
+		<h1 class="hidden">Click Game</h1>
+		<section id="scoreboard" class="columns small-4 large-4">
+		<h2 class="hidden">Score Area</h2>
+		<label class="columns button small-12 large-12" id="startEndTimer">BEGIN</label>
+			<label class="columns small-12 large-12"><span id="countDown">15</span> seconds</label>
+			<label class="columns small-12 large-12" id="result">You took <span id="score">0</span> clicks.</label>
+			<fieldset id="info" class="columns small-12 large-12">
+				<legend>Rules(Tips):</legend>
+				<ol>
+					<li>Press START to begin game.</li>
+					<li>Click on bugs to kill them untill they disapper from screen.</li>
+					<li>If you kill all bugs within timelimit you WIN else you LOST.</li>
+					<li>If you are out of time you loose.</li>
+					<li>Press END button to reset all things and start game again.</li>
+				</ol>
+			</fieldset>
+		</section>
+		
+		<section id="gameZone" class="columns small-8 large-8">
+		<h2 class="hidden">Game Area</h2>
+		<video autoplay muted loop>
+			<source src="video/video.mp4" type="video/mp4">
+		</video>
+			<img id="smallbug" src="images/bug.gif" alt="smallbug">
+			<img id="mediumbug" src="images/bug.gif" alt="mdiumbug">
+			<img id="largebug" src="images/bug.gif" alt="largebug">
+			
+		</section>
+	</div>
+	<script src="js/game.js"></script>
+	
+</body>
+</html>

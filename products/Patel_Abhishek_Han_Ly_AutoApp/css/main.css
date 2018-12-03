@@ -1,0 +1,13 @@
+.hidden{
+	display: none;
+}
+
+body{
+	background-color: black;
+}
+
+h2{
+	font-size: 31px;
+	margin: 10px;
+	color: #911414;
+}

@@ -1,0 +1,23 @@
+@import '_vars';
+
+#infuluncer-marketing{
+    opacity: 0;
+}
+
+#promoSection{
+    margin-top: 80px;
+    border: 5px solid  $promo-color;
+    padding: 15px;
+    margin-top: 20px;
+}
+h2, #promoText , #promoLabel{
+    font-weight: bold;
+    color: $promo-color;
+}
+#promoText{
+    border-left: 5px solid  $promo-color;
+}
+
+#promoLabel{
+    font-size: 40px;
+}

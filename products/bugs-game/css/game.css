@@ -1,0 +1,62 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	background-image: url("../images/background.jpg");
+	background-repeat: no-repeat;
+	height: 100%;
+	width: 100%;
+}
+#info{
+	font-weight: bold;
+	margin-top: 55px;
+	font-size: 15px;
+}
+.hidden{
+	display: none;
+}
+#gameArea{
+	margin-top: 15px;
+}
+#smallbug{
+	position: absolute;
+	left: 37%;
+	top:7%;
+	height: 70px;
+	width: 70px;
+}
+#mediumbug{
+	position: absolute;
+	left: 35%;
+	top:5%;
+	height: 140px;
+	width: 140px;
+}
+#largebug{
+	position: absolute;
+	left: 34%;
+	top:5%;
+	height: 200px;
+	width: 200px;
+}
+
+#scoreboard{
+	background: #ccc;
+	height: 500px;
+	padding: 10px;
+}
+#result{
+	font-size: 25px;
+	
+}
+#gameZone{
+	background: white;
+	height: 500px;
+}
+video{
+	height: 500px;
+}
+#countDown{
+	font-size: 40px;
+	font-weight: bold;
+}

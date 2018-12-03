@@ -15,7 +15,8 @@
             workdata : [],
             workhead: "",
             workdesc: "",
-            worklink: ""
+            worklink: "",
+            productlink: ""
         },
 
         created : function() {
@@ -47,6 +48,7 @@
                 this.workhead = e.work_title;
                 this.workdesc = e.work_description;
                 this.worklink = e.work_repolink;
+                this.productlink = e.work_productlink;
             },
 
             closeLightBox(){
