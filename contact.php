@@ -17,6 +17,8 @@
 <?php endif;?>
 
     <form class="formBox" action="./admin/scripts/sendEmail.php" method="post">
+    <span class="close-lightbox" v-on:click="closeLightBox"><a href="index.html">X</a></span>                
+
         <h2>CONTACT ME</h2>
         <input type="text" name="" placeholder="fullname">
 		<input type="email" name="email" placeholder="abc@abc.abc">
