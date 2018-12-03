@@ -163,29 +163,62 @@ footer div img{
 	padding-top: 30px;
 }
 
+// css for contact page
+#contactbg{
+	background: #34495e;
+}
 
+.formBox{
+	width: 600px;
+	padding: 40px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: #191919;
+	text-align: center;
+}
 
+.formBox h2{
+	color: white;
+	font-weight: 500;
+}
+.formBox input,textarea{
+	border: 0;
+	background: none;
+	display: inline-block;
+	margin: 20px auto;
+	text-align: center;
+	border: 2px solid #3498db;
+	padding: 14px 10px;
+	width: 400px;
+	outline: none;
+	color: white;
+	border-radius: 24px;
+	transition: 0.25s;
+}
 
-@media screen and (min-width: 600px) {
-	body{
-		font-size: 25px;
-	}
-	#home p {
-	  font-size: 30px;
-	}
-	h2,#workHeading{
-		font-size: 30px;
-	}
-  }
+.formBox input:focus,textarea:focus{
+	width: 500px;
+	border-color: #2ecc71;
+}
 
-@media screen and (min-width: 1000px) {
-	body{
-		font-size: 35px;
-	}
-	#home p  {
-	  font-size: 40px;
-	}
-	h2,#workHeading{
-		font-size: 40px;
-	}
-  }
+.formBox button{
+	border: 0;
+	background: none;
+	display: block;
+	margin: 20px auto;
+	text-align: center;
+	border: 2px solid #2ecc71;
+    padding: 14px 10px;
+    width: 200px;
+	outline: none;
+	color: white;
+	border-radius: 24px;
+	transition: 0.25s;
+	cursor: pointer;
+}
+
+.formBox button:hover{
+	background: #2ecc71;
+}
