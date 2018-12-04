@@ -12,6 +12,22 @@ body{
 	font-family: 'Fjalla One', sans-serif;
 }
 
+header{
+	position: -webkit-sticky;
+	 position: sticky;
+	 top: 0;
+	 z-index: 1;
+	 background: black;
+  }
+  #main-menu ul li a{
+	  color: white;
+  }
+  #main-menu ul li a:hover{
+	  color: #2ecc71;
+	  transition: .2s;
+  }
+ 
+
 /*=====================================style for lightbox ==============================*/
 .lightbox {
 	display: none;
