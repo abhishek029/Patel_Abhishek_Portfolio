@@ -17,13 +17,13 @@
 <?php endif;?>
 
     <form class="formBox" action="./admin/scripts/sendEmail.php" method="post">
-    <span class="close-lightbox" v-on:click="closeLightBox"><a href="index.html">X</a></span>                
+    <span ><a href="index.html" class="close-contact">X</a></span>                
 
         <h2>CONTACT ME</h2>
-        <input type="text" name="" placeholder="fullname">
-		<input type="email" name="email" placeholder="abc@abc.abc">
-		<textarea name="message" placeholder="message..."></textarea>
-		<button type="submit" name="submit">Submit</button>
+        <input type="text" name="" placeholder="NAME">
+		<input type="email" name="email" placeholder="Email">
+		<textarea name="message" placeholder="Message"></textarea>
+		<button type="submit" name="submit">SEND</button>
 	</form>
 
 </body>

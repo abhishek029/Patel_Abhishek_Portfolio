@@ -3,8 +3,16 @@
     display: none;
 }
 
+// style to show body background color and text color of body
 
-/* style for lightbox */
+body{
+    background-color: $body-color;
+	color: $body-text-color;
+	font-size: 20px;
+	font-family: 'Fjalla One', sans-serif;
+}
+
+/*=====================================style for lightbox ==============================*/
 .lightbox {
 	display: none;
 	position: fixed;
@@ -52,45 +60,25 @@
 #workDesc{
 	margin-top:30px;
 }
-// style to show body background color and text color of body
-body{
-    background-color: $body-color;
-	color: $body-text-color;
-	font-size: 20px;
-	font-family: 'Fjalla One', sans-serif;
-}
 
-footer{
-	padding-top: 30px;
-	padding-bottom: 30px;
-	background-color: $footer-color;
-}
-footer h3,h4{
-	color: $heading-color;
-}
-footer p{
-	color: black;
-}
-footer div label{
-	font-weight: bold;
-	text-align: center;
-}
-footer div img{
-	margin-top: 20px;
-}
-/* ==============HOME CSS============== */
+
+
+/* ========================================HOME CSS========================================== */
 #home{
 	padding-top: 15%;
 	padding-bottom: 15%;
 }
 // style for watch reel button
 .myButton{
-	background-color: white;
-	color: black;
+	background:none;
 	font-weight: bold;
-	border: 3px solid black;
-	border-radius: 15px;
+	border: 3px solid #2ecc71;
+	padding: 14px 10px;
+	border-radius: 24px;
 	margin: 5% 0 0 35%;		/*top-right-bottom-left*/
+}
+.myButton:hover{
+	background: #2ecc71;
 }
 
 #home p{
@@ -99,11 +87,11 @@ footer div img{
 // style of span tag to look different 
 .promoText{
 	font-weight: bold;
-	color: $heading-color;
+	color: #2ecc71;
 	font-family: 'Patrick Hand', cursive;
 }
 
-/* ==============ABOUT CSS============ */ 
+/* =========================================ABOUT CSS================================= */ 
 
 #about h2{
 	margin-bottom: 40px;
@@ -121,7 +109,7 @@ footer div img{
 	margin-top: 50px;
 }
 
-/* ==============PORTFFOLIO CSS============ */ 
+/* =================================PORTFFOLIO CSS=============================== */ 
 
 // style to show headings of website
 #workHeading,h2{
@@ -131,16 +119,17 @@ footer div img{
 	font-family: 'Fjalla One', sans-serif;
 }
 
-.box img{
+.box{
 	margin-top: 40px;
 	opacity: 1;
 	transition: .2s ease-in-out;
 	border: 5px solid #fff;
+	overflow: hidden;
+	cursor: pointer;
 }
-
-.showLightbox:hover{
+.box img:hover{
 	transition: .2s ease-in-out;
-	transform: scale(.9); 
+	transform: scale(1.05); 
 	-webkit-filter: grayscale(80%);
 	filter: grayscale(80%);
 }
@@ -163,11 +152,55 @@ footer div img{
 	padding-top: 30px;
 }
 
-// css for contact page
+
+/* ========================================FOOTER=========================================*/
+footer{
+	background-color: $footer-color;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+footer div img{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+.footerHead{
+	font-size: 30px;
+	color: black;
+	font-weight: bold;
+	font-family: sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+.subData{
+	font-size: 15px;
+	color: #333333;
+	padding: 0;
+	margin: 0;
+	padding-left: 30px;
+}
+
+
+/*===================================CONTACT PAGE CSS=======================================*/
 #contactbg{
 	background: #34495e;
 }
+.close-contact{
+	position: absolute;
+	right: 12px;
+	top: 12px;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 2em;
+	font-weight: bold;
+	color: white;
+	cursor: pointer;
+}
 
+.close-contact:hover{
+	text-decoration: none;
+	color: #2ecc71;
+}
 .formBox{
 	width: 600px;
 	padding: 40px;
@@ -222,3 +255,5 @@ footer div img{
 .formBox button:hover{
 	background: #2ecc71;
 }
+
+

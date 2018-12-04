@@ -45,7 +45,7 @@
                 <div class="columns small-12" v-for="about in aboutdata">  
 
                     <div class="columns small-12 medium-4">
-                        <img class="columns small-8  medium-12" :src="'images/'+about.image" alt="profileimage">
+                        <img id="profileImg" class="columns small-8  medium-12" :src="'images/'+about.image" alt="profileimage">
                     </div>
 
                     <div class="columns small-12 text-center medium-8">
@@ -74,9 +74,11 @@
             <p id="workText" class="columns small-8 text-center">Check out some of my work which I did recently</p>
                 
             <div id="houseImages">
-                    <div class="columns small-12 medium-6 box"  v-for="work in workdata">
+                    <div class="columns small-12 medium-6"  v-for="work in workdata">
                         <!-- <h3 class="workImageHeading text-center">{{work.work_title}}</h3>                             -->
+                        <div class="box">
                         <img class="showLightbox" v-on:click="showLightBox(work)" :data-offset="work.work_id" :src="'images/'+work.work_thumbnail" alt="workimage">                        
+                        </div>
                     </div>
                 </div>
         </section>  
@@ -108,25 +110,26 @@
 
         <footer class="row">
 
-            <div class="columns small-4 text-left">
-                <h3>PATEL ABHISHEK</h3>
-                <h3>Study: </h3>
-                <p>INTERACTIVE MEDIA DESIGN</p>
-                <p>BECHELOR IN COMPUTER APPLICATIONS</p>
-                <p>Interest: FRONT-BACK END DEVELOPING</p>
+            <div class="columns small-4 text-center">
+                <h3 class="footerHead">PATEL ABHISHEK</h3>
+                <label class="subData text-left">INTERACTIVE MEDIA DESIGN</label>
+                <label class="subData text-left">BECHELOR IN COMPUTER APPLICATIONS</label>
+                <label class="subData text-left">Interest: FRONT-BACK END DEVELOPING</label>
             </div>
-            <div class="columns small-4">
-                    <a href="https://github.com/abhishek029" target="_blank"><img class="small-2 small-offset-4" src="images/repo.svg"></a>
+            <div class="columns small-4 medium-4">
+                    <a href="https://github.com/abhishek029" target="_blank"><img class="small-4 small-offset-4" src="images/repo.svg"></a>
                 </div>
-            <div class="columns small-4">
-                <h3>Education</h3>
-                <p>FANSHAWE COLLEGE</p>
-                <p>DOWNTOWN CAMPUS</p>
-                <p>137 DUNDAS STREET</p>
+            <div class="columns small-4 text-center">
+                <h3 class="footerHead">Education</h3>
+                <label class="subData text-left">FANSHAWE COLLEGE</label>
+                <label class="subData text-left">DOWNTOWN CAMPUS</label>
+                <label class="subData text-left">137 DUNDAS STREET</label>
             </div>
         </footer>
 
     </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>
     <script src="js/vendor/foundation.js"></script>
