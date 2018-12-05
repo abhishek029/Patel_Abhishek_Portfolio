@@ -55,6 +55,8 @@
             showPromoReel(){
                 document.querySelector(".reelLightbox").classList.add('show-lightbox');
                 document.querySelector("body").classList.add('removeScroll');
+                // top autoplay the reel
+                document.querySelector("#myVideo").play();
             },
 
             closeLightBox(){
@@ -62,6 +64,9 @@
                 document.querySelector("body").classList.remove('removeScroll');
                 document.querySelector(".lightbox").classList.remove('show-lightbox');
                 document.querySelector(".reelLightbox").classList.remove('show-lightbox');
+                // code for reseting the promo reel and pausing it
+                document.querySelector("#myVideo").pause();
+                document.querySelector("#myVideo").currentTime=0;
             },
             hideMenu(){
                     document.querySelector("#main-menu").classList.remove('hidden');
