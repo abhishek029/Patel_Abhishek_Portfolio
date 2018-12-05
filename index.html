@@ -13,26 +13,48 @@
 </head>     
 
 <body>
-    <header>
-        <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
-                <button class="menu-icon columns" type="button" data-toggle="main-menu"></button>
-                <div class="title-bar-title columns text-center"><a href="index.html"><img class="columns small-3" src="images/logo.svg"></a></div>
-        </div>
-        
-        <nav id="main-menu" class="row">
-            <ul class="menu columns small-12 vertical medium-horizontal expanded">
-                <li id="homeScroll">HOME</li>
-                <li id="aboutScroll">ABOUT</li>
-                <li id="portfolioScroll">PORTFOLIO</li>
-                <li id="contactScroll">CONTACT</li>
-            </ul>           
-        </nav>
-    </header>
-
-
     <main id="app">
-        
-        <!-- Home/Promo page -->
+<!--     ============This code is totally correct but its now working so I did mu own menu by adding alasses and removing classes on click================
+        <header>
+            <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+                    <button class="menu-icon columns" type="button" data-toggle="main-menu"></button>                
+            </div>
+            
+            <nav id="main-menu" class="row">
+                <ul class="menu columns small-12 vertical medium-horizontal expanded">
+                    <li id="homeScroll">HOME</li>
+                    <li id="aboutScroll">ABOUT</li>
+                    <li id="portfolioScroll">PORTFOLIO</li>
+                    <li id="contactScroll">CONTACT</li>
+                </ul>           
+            </nav>
+        </header> -->
+
+        <header>
+                <div class="title-bar hide-for-medium">
+                        <button class="menu-icon columns" type="button" v-on:click="hideMenu()" id="myMenu"></button>                
+                </div>
+                
+                <nav id="main-menu" class="row hidden">
+                    <ul class="menu columns small-12 vertical expanded">
+                        <li id="homeScroll">HOME</li>
+                        <li id="aboutScroll">ABOUT</li>
+                        <li id="portfolioScroll">PORTFOLIO</li>
+                        <li id="contactScroll">CONTACT</li>
+                    </ul>           
+                </nav>
+                <nav class="row">
+                <ul class="menu columns small-12 hide-for-small-only horizontal expanded text-center">
+                        <li id="homeScroll">HOME</li>
+                        <li id="aboutScroll">ABOUT</li>
+                        <li id="portfolioScroll">PORTFOLIO</li>
+                        <li id="contactScroll">CONTACT</li>
+                    </ul> 
+                    </nav>
+            </header>
+
+
+    <!-- Home/Promo page -->
         <section id="home" class="row sectionContainer">
             <h2 class="hidden">Promo Section</h2>
             <p class="columns small-8 text-center">My inspiration " <span class="promoText"> {{ promoText }} </span>"</p>
@@ -40,11 +62,10 @@
         </section>  
 
 
-<!-- 
-        <section class="row lightbox" >
-            
+
+        <section class="row reelLightbox" >
                 <span class="close-lightbox" v-on:click="closeLightBox">X</span>    
-                <video class="" id="myVideo">
+                <video class="columns small-12" id="myVideo">
                     <source src="video/finalreel.mp4" type="video/mp4"/>
                     <source src="video/finalreel.webm" type="video/webm"/>
                     <source src="video/finalreel.ogg" type="video/ogg"/>
@@ -59,7 +80,7 @@
                     <img id="fullscreen" class="columns  small-1 large-1" src="images/fullscreen.svg" alt="fullscreen">
                  </div>
     
-        </section> -->
+        </section> 
 
 
 
@@ -74,7 +95,7 @@
                     </div>
 
                     <div class="columns small-12 text-center medium-8">
-                        <p class="columns small-12">{{ about.description }}</p>
+                        <p class="columns myDesc small-12">{{ about.description }}</p>
                     </div>
                    
                     <h3 class="columns small-6 text-center">What Can I Do.</h2>
@@ -102,7 +123,7 @@
                     <div class="columns small-12 medium-6"  v-for="work in workdata">
                         <!-- <h3 class="workImageHeading text-center">{{work.work_title}}</h3>                             -->
                         <div class="box">
-                        <img class="showLightbox" v-on:click="showLightBox(work)" :data-offset="work.work_id" :src="'images/'+work.work_thumbnail" alt="workimage">                        
+                            <img class="showLightbox" v-on:click="showLightBox(work)" :data-offset="work.work_id" :src="'images/'+work.work_thumbnail" alt="workimage">                        
                         </div>
                     </div>
                 </div>

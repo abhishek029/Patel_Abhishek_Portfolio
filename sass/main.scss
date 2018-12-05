@@ -1,6 +1,6 @@
 @import '_vars.scss';
 .hidden{
-    display: none;
+	display: none;
 }
 
 // style to show body background color and text color of body
@@ -20,17 +20,33 @@ header{
 	 z-index: 1;
 	 background: black;
   }
-  #main-menu ul li a{
-	  color: white;
+  #main-menu{
+	  position: absolute;
+	width: 100%;
+	 background: black;
   }
-  #main-menu ul li a:hover{
+  .myMenu{
+	  padding-top: 10px;
+  }
+ .title-bar{
+
+	margin-top: 15px;
+	margin-bottom: 15px;
+ }
+  ul li{
+	  color: white;
+	 margin-top: 15px;
+	 margin-bottom: 15px;
+  }
+  ul li:hover{
 	  color: #2ecc71;
 	  transition: .2s;
+	  cursor: pointer;
   }
  
 
-/*=====================================style for lightbox ==============================*/
-.lightbox {
+/*=====================================style for promo lightbox ==============================*/
+.reelLightbox {
 	display: none;
 	position: fixed;
 	top: 0;
@@ -43,6 +59,27 @@ header{
 	background-color: rgba(0,0,0,0.95);
 }
 
+.reelLightbox video{
+	margin-top: 100px;
+}
+
+
+/*=====================================style for work lightbox ==============================*/
+.lightbox {
+	display: none;
+	position: fixed;
+	top: 0;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	text-align: center;
+	background-color: rgba(0,0,0,0.95);
+}
+.removeScroll{
+	overflow: hidden;
+}
 .lightbox div{
 	margin-top: 10%
 }
@@ -129,6 +166,10 @@ header{
 	margin-top: 50px;
 }
 
+.myDesc{
+	margin-top: 50px;
+	line-height: 50px;
+}
 /* =================================PORTFFOLIO CSS=============================== */ 
 
 // style to show headings of website
@@ -152,6 +193,10 @@ header{
 	transform: scale(1.05); 
 	-webkit-filter: grayscale(80%);
 	filter: grayscale(80%);
+}
+.box:hover{
+	
+	box-shadow: 0 3px 15px rgba(138, 137, 137, 0.8);
 }
 
 

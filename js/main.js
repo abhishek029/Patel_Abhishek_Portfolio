@@ -49,15 +49,24 @@
                 this.workdesc = e.work_description;
                 this.worklink = e.work_repolink;
                 this.productlink = e.work_productlink;
+                document.querySelector("body").classList.add('removeScroll');
             },
 
             showPromoReel(){
-                document.querySelector(".lightbox").classList.add('show-lightbox');
+                document.querySelector(".reelLightbox").classList.add('show-lightbox');
+                document.querySelector("body").classList.add('removeScroll');
             },
 
             closeLightBox(){
                 console.log("closeLightBox");
+                document.querySelector("body").classList.remove('removeScroll');
                 document.querySelector(".lightbox").classList.remove('show-lightbox');
+                document.querySelector(".reelLightbox").classList.remove('show-lightbox');
+            },
+            hideMenu(){
+                    document.querySelector("#main-menu").classList.remove('hidden');
+                    
+               
             }
         }
     });

@@ -19,10 +19,11 @@ function scrollS(a){
 	if(a.id=="aboutScroll")
 		window.scrollTo({top: 550,behavior: "smooth"});
 	if(a.id=="portfolioScroll")
-		window.scrollTo({top: 2000,behavior: "smooth"});
+		window.scrollTo({top: 1300,behavior: "smooth"});
 	if(a.id=="contactScroll")
-		window.scrollTo({top: 3100,behavior: "smooth"});
-	
+		window.scrollTo({top: 3800,behavior: "smooth"});
+	if(a.id != "myMenu")
+		document.querySelector("#main-menu").classList.add('hidden');
 }
 
 document.addEventListener("click",scrollS,false); 	
