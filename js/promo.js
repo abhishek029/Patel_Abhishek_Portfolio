@@ -14,11 +14,15 @@ function scrollS(a){
 	a = a || window.event;
 	a = a.target || a.srcElement;
 	console.log(a.id);
-	if(a.id=="top")
-			window.scrollTo({ 
-				top: 1000,
-				behavior: "smooth"
-		});	
+	if(a.id=="homeScroll")
+		window.scrollTo({top: 0,behavior: "smooth"});	
+	if(a.id=="aboutScroll")
+		window.scrollTo({top: 550,behavior: "smooth"});
+	if(a.id=="portfolioScroll")
+		window.scrollTo({top: 2000,behavior: "smooth"});
+	if(a.id=="contactScroll")
+		window.scrollTo({top: 3100,behavior: "smooth"});
+	
 }
 
 document.addEventListener("click",scrollS,false); 	
