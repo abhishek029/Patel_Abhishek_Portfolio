@@ -51,6 +51,10 @@
                 this.productlink = e.work_productlink;
             },
 
+            showPromoReel(){
+                document.querySelector(".lightbox").classList.add('show-lightbox');
+            },
+
             closeLightBox(){
                 console.log("closeLightBox");
                 document.querySelector(".lightbox").classList.remove('show-lightbox');

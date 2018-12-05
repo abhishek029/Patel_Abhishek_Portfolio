@@ -21,7 +21,7 @@
         
         <nav id="main-menu" class="row">
             <ul class="menu columns small-12 vertical medium-horizontal expanded">
-                <li><a href="index.html">HOME</a></li>
+                <li id="top">HOME</li>
                 <li><a href="#about">ABOUT</a></li>
                 <li><a href="#portfolio">PORTFOLIO</a></li>
                 <li><a href="#contact">CONTACT</a></li>
@@ -36,8 +36,33 @@
         <section id="home" class="row sectionContainer">
             <h2 class="hidden">Promo Section</h2>
             <p class="columns small-8 text-center">My inspiration " <span class="promoText"> {{ promoText }} </span>"</p>
-            <input type="button" class="columns small-4 button myButton small-centered" value="WATCH REEL">
+            <input type="button" class="columns small-4 button myButton small-centered" v-on:click="showPromoReel()" value="WATCH REEL">
         </section>  
+
+
+<!-- 
+        <section class="row lightbox" >
+            
+                <span class="close-lightbox" v-on:click="closeLightBox">X</span>    
+                <video class="" id="myVideo">
+                    <source src="video/finalreel.mp4" type="video/mp4"/>
+                    <source src="video/finalreel.webm" type="video/webm"/>
+                    <source src="video/finalreel.ogg" type="video/ogg"/>
+                </video>
+    
+                <div class="controls">
+                    <img id="play" class="columns ppause small-offset-3 large-offset-3 small-1 large-1" src="images/pause.svg" alt="playbutton">
+
+                    <img id="mute" class="columns  small-1 large-1" src="images/mute.svg" alt="mutebutton">
+                    <img id="volup" class="columns  small-1 large-1" src="images/vol_up.svg" alt="volumeup">
+                    <img id="voldown" class="columns  small-1 large-1" src="images/vol_down.svg" alt="volumedown">
+                    <img id="fullscreen" class="columns  small-1 large-1" src="images/fullscreen.svg" alt="fullscreen">
+                 </div>
+    
+        </section> -->
+
+
+
 
         <!-- About page -->
         <section id="about" class="row sectionContainer">
@@ -134,5 +159,6 @@
     <script src="js/vendor/what-input.js"></script>
     <script src="js/vendor/foundation.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/promo.js"></script>
 </body>
 </html>
