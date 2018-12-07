@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/foundation.min.css">
     <link rel="stylesheet" href="css/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Patrick+Hand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One%7CPatrick+Hand" rel="stylesheet">
     <!-- link to lottie  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.4.1/lottie.js"></script>
     <!-- link to way points -->
@@ -20,6 +20,7 @@
 <body>
     <main id="app">
    
+            <h1 class="hidden">Container</h1>
 <!--============This code is totally correct but its now working so I did mu own menu by adding alasses and removing classes on click================
         <header>
             <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
@@ -42,15 +43,17 @@
                 </div>
                 
                 <nav id="main-menu" class="row hidden">
+                    <h2 class="hidden">Small Menu</h2>
                     <ul class="menu columns small-12 vertical expanded">
-                        <li id="homeScroll"><a href="#home">HOME</a></li>
-                        <li id="aboutScroll"><a href="#about">ABOUT</a></li>
-                        <li id="portfolioScroll"><a href="#portfolio">PORTFOLIO</a></li>
-                        <li id="contactScroll"><a href="#contact">CONTACT</a></li>
+                        <li><a href="#home">HOME</a></li>
+                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="#portfolio">PORTFOLIO</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
                     </ul>           
                 </nav>
                 <nav class="row">
-                <ul class="menu columns small-12 hide-for-small-only horizontal expanded text-center">
+                    <h2 class="hidden">Main Menu</h2>
+                    <ul class="menu columns small-12 hide-for-small-only horizontal expanded text-center">
                         <li id="homeScroll">HOME</li>
                         <li id="aboutScroll">ABOUT</li>
                         <li id="portfolioScroll">PORTFOLIO</li>
@@ -69,8 +72,9 @@
         </section>  
 
 
-
+<!-- Lightbox for Reel -->
         <section class="row reelLightbox" >
+            <h3 class="hidden">REEL LIGHTBOX</h3>
                 <span class="close-lightbox" v-on:click="closeLightBox">X</span>    
                 <video class="row small-12" id="myVideo">
                     <source src="video/finalreel.mp4" type="video/mp4"/>
@@ -104,7 +108,7 @@
                         <p class="columns myDesc small-12">{{ about.description }}</p>
                     </div>
                    
-                    <h3 class="columns small-6 text-center">What Can I Do.</h2>
+                    <h3 class="columns small-6 text-center">What Can I Do.</h3>
 
                     <div class="columns small-12 medium-6">
                         <object class="columns small-6 design small-offset-3" data="images/design.svg" type="image/svg+xml"></object>
@@ -138,14 +142,15 @@
 
         <!-- LightBox stuff which is hidden by default -->
         <section class="lightbox">
+            <h3 class="hidden">Work Lightbox</h3>
                 <span class="close-lightbox" v-on:click="closeLightBox">X</span>                
 
                 <div class="columns small-12 large-4 large-offset-1">
-                    <img src="" id="lightbox-image">
+                    <img src="" id="lightbox-image" alt="lightboxImage">
                 </div>
 
                 <div id="workInfo" class="columns small-12 large-7">   
-                    <h2 class="columns small-12" id="workHeading">{{workhead}}</h2>             
+                    <h4 class="columns small-12" id="workHeading">{{workhead}}</h4>             
                     <p class="columns small-12" id="workDesc">{{workdesc}}</p>
                     <a class="columns small-3 worklink" :href="worklink" target="_blank"><img class="columns small-8" src="images/repo.svg"></a>   
                     <a class="columns small-6 text-left" :href="productlink" target="_blank">View Product</a>     
@@ -169,7 +174,7 @@
                 <label class="subData text-left">Interest: FRONT-BACK END DEVELOPING</label>
             </div>
             <div class="columns small-4 medium-4">
-                    <a href="https://github.com/abhishek029" target="_blank"><img class="small-4 small-offset-4" src="images/repo.svg"></a>
+                    <a href="https://github.com/abhishek029" target="_blank"><img class="small-4 small-offset-4" src="images/repo.svg" alt="remoHomeLink"></a>
                 </div>
             <div class="columns small-4 text-center">
                 <h3 class="footerHead">Education</h3>

@@ -25,6 +25,15 @@ header{
 	width: 100%;
 	 background: black;
   }
+  #main-menu a{
+	text-decoration: none;
+	color: #fff;
+  }
+  #main-menu a:hover{
+  color: #2ecc71;
+  transition: .2s;
+  cursor: pointer;
+}
   .myMenu{
 	  padding-top: 10px;
   }
