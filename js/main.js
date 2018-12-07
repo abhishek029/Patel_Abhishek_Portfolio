@@ -1,6 +1,5 @@
 (()=> {
 
-    TweenMax.to("#profileImg", 1, {rotation:10});
 
     const vm = new Vue({
         el: '#app',

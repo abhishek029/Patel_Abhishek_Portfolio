@@ -9,11 +9,17 @@
     <link rel="stylesheet" href="css/foundation.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Patrick+Hand" rel="stylesheet">
+    <!-- link to lottie  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.4.1/lottie.js"></script>
+    <!-- link to way points -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.js"></script>
+    <!-- link to vue.js -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
 </head>     
 
 <body>
     <main id="app">
+   
 <!--============This code is totally correct but its now working so I did mu own menu by adding alasses and removing classes on click================
         <header>
             <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
@@ -37,10 +43,10 @@
                 
                 <nav id="main-menu" class="row hidden">
                     <ul class="menu columns small-12 vertical expanded">
-                        <li id="homeScroll">HOME</li>
-                        <li id="aboutScroll">ABOUT</li>
-                        <li id="portfolioScroll">PORTFOLIO</li>
-                        <li id="contactScroll">CONTACT</li>
+                        <li id="homeScroll"><a href="#home">HOME</a></li>
+                        <li id="aboutScroll"><a href="#about">ABOUT</a></li>
+                        <li id="portfolioScroll"><a href="#portfolio">PORTFOLIO</a></li>
+                        <li id="contactScroll"><a href="#contact">CONTACT</a></li>
                     </ul>           
                 </nav>
                 <nav class="row">
@@ -53,9 +59,10 @@
                     </nav>
             </header>
 
-
+            <div class="preloader"></div>
     <!-- Home/Promo page -->
         <section id="home" class="row sectionContainer">
+                
             <h2 class="hidden">Promo Section</h2>
             <p class="columns small-8 text-center">My inspiration " <span class="promoText"> {{ promoText }} </span>"</p>
             <input type="button" class="columns small-4 button myButton small-centered" v-on:click="showPromoReel()" value="WATCH REEL">
@@ -65,18 +72,18 @@
 
         <section class="row reelLightbox" >
                 <span class="close-lightbox" v-on:click="closeLightBox">X</span>    
-                <video class="columns small-12" id="myVideo">
+                <video class="row small-12" id="myVideo">
                     <source src="video/finalreel.mp4" type="video/mp4"/>
                     <source src="video/finalreel.webm" type="video/webm"/>
                     <source src="video/finalreel.ogg" type="video/ogg"/>
                 </video>
     
-                <div class="controls">
-                    <img id="play" class="columns ppause small-offset-3 large-offset-3 small-1 large-1" src="images/pause.svg" alt="playbutton">
-                    <img id="mute" class="columns  small-1 large-1" src="images/mute.svg" alt="mutebutton">
-                    <img id="volup" class="columns  small-1 large-1" src="images/vol_up.svg" alt="volumeup">
-                    <img id="voldown" class="columns  small-1 large-1" src="images/vol_down.svg" alt="volumedown">
-                    <img id="fullscreen" class="columns  small-1 large-1" src="images/fullscreen.svg" alt="fullscreen">
+                <div class="controls row">
+                    <img id="play" class="columns ppause small-offset-2 large-offset-7 small-2 large-1" src="images/pause.svg" alt="playbutton">
+                    <img id="mute" class="columns  small-2 large-1" src="images/mute.svg" alt="mutebutton">
+                    <img id="volup" class="columns  small-2 large-1" src="images/vol_up.svg" alt="volumeup">
+                    <img id="voldown" class="columns  small-2 large-1" src="images/vol_down.svg" alt="volumedown">
+                    <img id="fullscreen" class="columns  small-2 large-1" src="images/fullscreen.svg" alt="fullscreen">
                  </div>
     
         </section> 
@@ -100,7 +107,7 @@
                     <h3 class="columns small-6 text-center">What Can I Do.</h2>
 
                     <div class="columns small-12 medium-6">
-                        <object class="columns small-6 small-offset-3" data="images/design.svg" type="image/svg+xml"></object>
+                        <object class="columns small-6 design small-offset-3" data="images/design.svg" type="image/svg+xml"></object>
                         <p class="columns text-center">{{designSkills}}</p>
                     </div>
                         
