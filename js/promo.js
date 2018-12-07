@@ -1,5 +1,34 @@
+var waypoint = new Waypoint({
+	element: document.getElementById('about'),
+	handler: function(direction) {
+	  console.log('Scrolled to waypoint!')
+	  
+	   TweenMax.to(".myDesc", 1, {scale:1});
+	}
+  })
 
 
+
+//   =================================Lottie================================
+const preloader = document.querySelector('.preloader');
+
+	let preloadAnim = bodymovin.loadAnimation({
+		wrapper : preloader,
+		animType : 'svg',
+		loop : false,
+		autoplay : true,
+		path : 'data/preloader.json'
+
+	});
+
+	function playAnimation() {
+		preloadAnim.play();
+		// setInterval(document.querySelector(".preloader").style.display="none", 1000);
+		setInterval("",10000);
+		document.querySelector(".preloader").style.display="none";
+	}
+
+	playAnimation();
 //variables for video controls
 var movie = document.querySelector("video"),
 volumeUp = document.querySelector("#volup"),
@@ -11,6 +40,7 @@ ppause = document.querySelector(".ppause");
 
 
 function scrollS(a){
+	var home= document.querySelector("#home");
 	a = a || window.event;
 	a = a.target || a.srcElement;
 	console.log(a.id);
@@ -21,7 +51,7 @@ function scrollS(a){
 	if(a.id=="portfolioScroll")
 		window.scrollTo({top: 1300,behavior: "smooth"});
 	if(a.id=="contactScroll")
-		window.scrollTo({top: 3800,behavior: "smooth"});
+		window.scrollTo({top: 4500,behavior: "smooth"});
 	if(a.id != "myMenu")
 		document.querySelector("#main-menu").classList.add('hidden');
 }
