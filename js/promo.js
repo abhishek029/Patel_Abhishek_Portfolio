@@ -40,7 +40,6 @@ ppause = document.querySelector(".ppause");
 
 
 function scrollS(a){
-	var home= document.querySelector("#home");
 	a = a || window.event;
 	a = a.target || a.srcElement;
 	console.log(a.id);

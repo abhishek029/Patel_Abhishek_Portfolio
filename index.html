@@ -39,12 +39,14 @@
 
         <header>
                 <div class="title-bar hide-for-medium">
-                        <button class="menu-icon columns" type="button" v-on:click="hideMenu()" id="myMenu"></button>                
+                        <button class="menu-icon columns" type="button" v-on:click="hideMenu()" id="myMenu"></button>   
+                        <img class="columns small-3 small-centered" src="images/logo.svg" alt="menulogo">
                 </div>
                 
                 <nav id="main-menu" class="row hidden">
                     <h2 class="hidden">Small Menu</h2>
                     <ul class="menu columns small-12 vertical expanded">
+
                         <li><a href="#home">HOME</a></li>
                         <li><a href="#about">ABOUT</a></li>
                         <li><a href="#portfolio">PORTFOLIO</a></li>
@@ -54,10 +56,12 @@
                 <nav class="row">
                     <h2 class="hidden">Main Menu</h2>
                     <ul class="menu columns small-12 hide-for-small-only horizontal expanded text-center">
-                        <li id="homeScroll">HOME</li>
-                        <li id="aboutScroll">ABOUT</li>
-                        <li id="portfolioScroll">PORTFOLIO</li>
-                        <li id="contactScroll">CONTACT</li>
+                        
+                        <li id="homeScroll" tabindex="1">HOME</li>
+                        <li id="aboutScroll" tabindex="2">ABOUT</li>
+                        <li id="homeScroll"><a href="index.html"><img class="small-3" src="images/logo.svg" alt="mainlogo"></a></li>
+                        <li id="portfolioScroll" tabindex="3">PORTFOLIO</li>
+                        <li id="contactScroll" tabindex="4">CONTACT</li>
                     </ul> 
                     </nav>
             </header>
@@ -68,7 +72,7 @@
                 
             <h2 class="hidden">Promo Section</h2>
             <p class="columns small-8 text-center">My inspiration " <span class="promoText"> {{ promoText }} </span>"</p>
-            <input type="button" class="columns small-4 button myButton small-centered" v-on:click="showPromoReel()" value="WATCH REEL">
+            <input type="button" tabindex="5" class="columns small-4 button myButton small-centered" v-on:click="showPromoReel()" value="WATCH REEL">
         </section>  
 
 
@@ -133,7 +137,7 @@
                     <div class="columns small-12 medium-6"  v-for="work in workdata">
                         <!-- <h3 class="workImageHeading text-center">{{work.work_title}}</h3>                             -->
                         <div class="box">
-                            <img class="showLightbox" v-on:click="showLightBox(work)" :data-offset="work.work_id" :src="'images/'+work.work_thumbnail" alt="workimage">                        
+                            <img class="showLightbox" v-on:click="showLightBox(work)" tabindex="6" :data-offset="work.work_id" :src="'images/'+work.work_thumbnail" alt="workimage">                        
                         </div>
                     </div>
                 </div>
