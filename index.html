@@ -38,7 +38,8 @@
         </header> -->
 
         <header>
-                <div class="title-bar hide-for-medium">
+            <div class="show-for-small-only">
+                <div class="title-bar">
                         <button class="menu-icon columns" type="button" v-on:click="hideMenu()" id="myMenu"></button>   
                         <img class="columns small-3 small-centered" src="images/logo.svg" alt="menulogo">
                 </div>
@@ -53,20 +54,21 @@
                         <li><a href="#contact">CONTACT</a></li>
                     </ul>           
                 </nav>
+            </div>
                 <nav class="row">
                     <h2 class="hidden">Main Menu</h2>
                     <ul class="menu columns small-12 hide-for-small-only horizontal expanded text-center">
                         
                         <li id="homeScroll" tabindex="1">HOME</li>
                         <li id="aboutScroll" tabindex="2">ABOUT</li>
-                        <li id="homeScroll"><a href="index.html"><img class="small-3" src="images/logo.svg" alt="mainlogo"></a></li>
+                        <li id="mainLogo"><a href="index.html"><img class="small-3" src="images/logo.svg" alt="mainlogo"></a></li>
                         <li id="portfolioScroll" tabindex="3">PORTFOLIO</li>
                         <li id="contactScroll" tabindex="4">CONTACT</li>
                     </ul> 
                     </nav>
             </header>
 
-            <div class="preloader"></div>
+            <!-- <div class="preloader"></div> -->
     <!-- Home/Promo page -->
         <section id="home" class="row sectionContainer">
                 
