@@ -54,31 +54,22 @@
             showPromoReel(){
                 document.querySelector(".reel").classList.remove('hidden');
                 document.querySelector("#home").classList.add('hidden');
-                
-                
-                // document.querySelector(".reel").classList.add('show-lightbox');
-                // document.querySelector("body").classList.add('removeScroll');
                 // top autoplay the reel
                 document.querySelector("#myVideo").play();
             },
 
             closeLightBox(){
                 console.log("closeLightBox");
-                // document.querySelector("body").classList.remove('removeScroll');
-                // document.querySelector(".lightbox").classList.remove('show-lightbox');
-                // document.querySelector(".reel").classList.remove('show-lightbox');
-                // code for reseting the promo reel and pausing it
-
-
+                document.querySelector("body").classList.remove('removeScroll');
+                document.querySelector(".lightbox").classList.remove('show-lightbox');                
                 document.querySelector(".reel").classList.add('hidden');
                 document.querySelector("#home").classList.remove('hidden');
+                // code for reseting the promo reel and pausing it
                 document.querySelector("#myVideo").pause();
                 document.querySelector("#myVideo").currentTime=0;
             },
             hideMenu(){
-                    document.querySelector("#main-menu").classList.remove('hidden');
-                    
-               
+                    document.querySelector("#main-menu").classList.remove('hidden');               
             }
         }
     });
