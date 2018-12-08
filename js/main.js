@@ -38,7 +38,7 @@
                     console.log(error);
                 });
             },
-
+           
             showLightBox(e){
                 document.querySelector(".lightbox").classList.add('show-lightbox');
                 console.log('image src will be : images/work'+ (e.work_id) +'.jpg');

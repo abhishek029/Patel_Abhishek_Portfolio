@@ -1,9 +1,25 @@
+// ===============typing animation============
+	var type=0,
+	promoText = "EVEN A SINGLE DOT CAN BE CODED IN MULTIPLE WAYS";
+
+	function startTyping(){
+		if(type<promoText.length){
+			document.querySelector(".promoText").innerHTML+=promoText.charAt(i);
+			i++;
+
+			setTimeout(startTyping,150);
+		
+		}
+	};
+	startTyping();
+	
+	
+	
 	//default animation at loading site   
 	TweenMax.to("#home", 0.1, {opacity:0.1,y:100});
 	TweenMax.to("#about", 0.1, {opacity:0.1,y:100});
 	TweenMax.to("#portfolio", 0.1, {opacity:0.1,y:100});
 	TweenMax.to("#contact", 0.1, {opacity:0.1,y:100});
-  
 
 // variable for running loop only once
 var i = 0;
