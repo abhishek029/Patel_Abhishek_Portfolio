@@ -9,7 +9,6 @@ body{
     background-color: $body-color;
 	color: $body-text-color;
 	font-size: 20px;
-	
 	font-family: 'Fjalla One', sans-serif;
 }
 
@@ -38,7 +37,9 @@ header{
 	  padding-top: 10px;
   }
   
- 
+ .heading{
+	 font-size: 20px;
+ }
  
   .title-bar{
 
@@ -162,6 +163,7 @@ header{
 // style of span tag to look different 
 .promoText{
 	font-weight: bold;
+	font-size: 30px;
 	color: #2ecc71;
 	font-family: 'Patrick Hand', cursive;
 }
@@ -338,4 +340,39 @@ footer div img{
 	background: #2ecc71;
 }
 
+@media only screen  and (min-width : 1240px) {
+	/* Styles */
+	.heading{
+		font-size: 50px;
+	}
+	body{
+		font-size: 30px;
+	}
+	}
 
+
+	@media only screen  and (min-width : 900px) {
+		/* Styles */
+		.heading{
+			font-size: 40px;
+		}
+		body{
+			font-size: 25px;
+		}
+		.promoText{
+			font-size: 40px;
+		}
+		}
+
+		@media only screen  and (min-width : 1240px) {
+			/* Styles */
+			.heading{
+				font-size: 50px;
+			}
+			body{
+				font-size: 30px;
+			}
+			.promoText{
+				font-size: 50px;
+			}
+			}
