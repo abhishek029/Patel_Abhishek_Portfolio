@@ -1,37 +1,21 @@
-// ===============typing animation============
-	var type=0,
-	promoText = "EVEN A SINGLE DOT CAN BE CODED IN MULTIPLE WAYS";
 
-	function startTyping(){
-		if(type<promoText.length){
-			document.querySelector(".promoText").innerHTML+=promoText.charAt(i);
-			i++;
-
-			setTimeout(startTyping,150);
-		
-		}
-	};
-	startTyping();
-	
-	
-	
-	//default animation at loading site   
-	TweenMax.to("#home", 0.1, {opacity:0.1,y:100});
-	TweenMax.to("#about", 0.1, {opacity:0.1,y:100});
-	TweenMax.to("#portfolio", 0.1, {opacity:0.1,y:100});
-	TweenMax.to("#contact", 0.1, {opacity:0.1,y:100});
+	// //default animation at loading site   
+	// TweenMax.to("#home", 0.1, {opacity:0.1,y:100});
+	TweenMax.to("#about", 0.1, {opacity:0.1});
+	TweenMax.to("#portfolio", 0.1, {opacity:0.1});
+	// TweenMax.to("#contact", 0.1, {opacity:0.1,y:100});
 
 // variable for running loop only once
 var i = 0;
 var home = new Waypoint({
-	element: document.querySelector('#home'),
+	element: document.querySelector('#promoSection'),
 	handler: function(direction) {
 	  console.log('Scrolled to home!')
 	  if(i == 0){
-	   TweenMax.to("#home", 1, {opacity:1,y:0});
+	   TweenMax.from("#promoSection", 1, {opacity:0.7});
 	   i++;
 	  }
-	},offset:600
+	},offset:300
   });
 
 
@@ -41,10 +25,10 @@ var about = new Waypoint({
 	handler: function(direction) {
 	  console.log('Scrolled to about!')
 	  if(a == 0){
-	   TweenMax.to("#about", 1, {opacity:1,y:0});
+	   TweenMax.to("#about", 1, {opacity:1});
 	   a++;
 	  }
-	},offset:600
+	},offset:450
   });
 
 var b = 0; 
@@ -53,23 +37,23 @@ var portfolio = new Waypoint({
 	handler: function(direction) {
 	  console.log('Scrolled to portfolio!')
 	  if(b == 0){
-	   TweenMax.to("#portfolio", 1, {opacity:1,y:0});
+	   TweenMax.to("#portfolio", 1, {opacity:1});
 	   b++;
 	  }
-	},offset: 600
+	},offset: 450
   });
 
- var c = 0; 
- var contact = new Waypoint({
-	  element: document.querySelector('#contact'),
-	  handler: function(direction) {
-		console.log('Scrolled to contact!')
-		if(c == 0){
-		 TweenMax.to("#contact", 1, {opacity:1,y:0});
-		 c++;
-		}
-	  },offset:600
-	});
+//  var c = 0; 
+//  var contact = new Waypoint({
+// 	  element: document.querySelector('#contact'),
+// 	  handler: function(direction) {
+// 		console.log('Scrolled to contact!')
+// 		if(c == 0){
+// 		 TweenMax.to("#contact", 1, {opacity:1,y:0});
+// 		 c++;
+// 		}
+// 	  },offset:600
+// 	});
   
 
 //   =================================Lottie================================
@@ -110,13 +94,9 @@ function playPause(){
 		if (movie.paused) {
 			movie.play();
 			play.src = "images/pause.svg";
-			// hidePlayIcon();
-			// playIcon.classList.remove("hidden");
 		} else {
 			movie.pause();
 			play.src = "images/play.svg";
-			// hidePauseIcon();
-			// pauseIcon.classList.remove("hidden");
 		}
 }
 
@@ -157,7 +137,7 @@ function goFullscreen() {
 
 
 
-//listeners for trailer and teaser
+//listeners
 
 volumeUp.addEventListener("click", volumeup, false);
 volumeDown.addEventListener("click", volumedown, false);
@@ -165,22 +145,3 @@ mute.addEventListener("click", mutevolume, false);
 fullscreen.addEventListener("click", goFullscreen, false);
 ppause.addEventListener("click", playPause, false);
 
-// ================ Scroll Effects from medium screen========================
-
-function scrollS(a){
-	a = a || window.event;
-	a = a.target || a.srcElement;
-	console.log(a.id);
-	if(a.id=="homeScroll")
-		window.scrollTo({top: 0,behavior: "smooth"});	
-	if(a.id=="aboutScroll")
-		window.scrollTo({top: 550,behavior: "smooth"});
-	if(a.id=="portfolioScroll")
-		window.scrollTo({top: 1300,behavior: "smooth"});
-	if(a.id=="contactScroll")
-		window.scrollTo({top: 4500,behavior: "smooth"});
-	if(a.id != "myMenu")
-		document.querySelector("#main-menu").classList.add('hidden');
-}
-
-document.addEventListener("click",scrollS,false); 

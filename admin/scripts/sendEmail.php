@@ -13,7 +13,7 @@
 		
 		$name = $_POST['name'];
 		$to = 'patelabhi585@gmail.com';
-		$subject = "Portfolio Site Feedback";
+		$subject = "Portfolio: ".$_POST['name'];
 		$message = 'Message Body:'.$_POST['message'];
 		$headers = "From: noreply@ABHIPATEL.ca\r\n";
 		$headers .= 'Reply-To:'.$_POST['email'];

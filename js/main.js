@@ -1,15 +1,11 @@
 (()=> {
-
-
     const vm = new Vue({
-        el: '#app',
-
+        el: "#app",
         data: {
-            promoText : "EVEN A SINGLE DOT CAN BE CODED IN MULTIPLE WAYS",
-            aboutTitle : "ABOUT ME",
+            // variables
+            promoText: "EVEN A SINGLE DOT CAN BE CODED IN MULTIPLE WAYS",
             designSkills: "Photoshop, Ilustrator, Indesign, Cinema 4D, After Effects",
             developerSkills: "HTML5, CSS3, SASS, JavaScript, Git,PHP, Java, C, C++, Python,  SQL Database",
-            workTitle : "PORTFOLIO",
             aboutdata : [],
             workdata : [],
             workhead: "",
@@ -17,14 +13,13 @@
             worklink: "",
             productlink: ""
         },
-
-        created : function() {
+        created: function(){
+            //called on pageload
             this.fetchAllData();
         },
-
-        methods : {
-
-        // function for grabbing all data from database
+        methods: {
+            // functions
+            // function for grabbing all data from database
             fetchAllData() {                         
                 fetch(`./includes/index.php`) // pass in the one or many query
                 .then(res => res.json())
@@ -51,26 +46,12 @@
                 document.querySelector("body").classList.add('removeScroll');
             },
 
-            showPromoReel(){
-                document.querySelector(".reel").classList.remove('hidden');
-                document.querySelector("#home").classList.add('hidden');
-                // top autoplay the reel
-                document.querySelector("#myVideo").play();
-            },
-
             closeLightBox(){
                 console.log("closeLightBox");
                 document.querySelector("body").classList.remove('removeScroll');
                 document.querySelector(".lightbox").classList.remove('show-lightbox');                
-                document.querySelector(".reel").classList.add('hidden');
-                document.querySelector("#home").classList.remove('hidden');
-                // code for reseting the promo reel and pausing it
-                document.querySelector("#myVideo").pause();
-                document.querySelector("#myVideo").currentTime=0;
-            },
-            hideMenu(){
-                    document.querySelector("#main-menu").classList.remove('hidden');               
+                // document.querySelector(".reel").classList.add('hidden');
             }
         }
-    });
+    })
 })();
